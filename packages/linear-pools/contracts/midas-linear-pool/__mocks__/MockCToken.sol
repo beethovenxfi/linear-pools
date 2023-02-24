@@ -121,4 +121,14 @@ contract MockCToken is TestToken, ICToken, MockMaliciousQueryReverter {
     function totalSupply() public view override(ERC20, ICToken) returns (uint256) {
         return 0;
     }
+
+    function totalAdminFees() public view override returns (uint256) {
+        maybeRevertMaliciously();
+        return 0;
+    }
+
+    function totalFuseFees() public view override returns (uint256) {
+        maybeRevertMaliciously();
+        return 0;
+    }
 }

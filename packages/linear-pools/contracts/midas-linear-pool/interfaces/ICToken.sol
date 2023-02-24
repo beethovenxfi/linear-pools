@@ -87,4 +87,13 @@ interface ICToken {
      */
     function totalSupply() external view returns (uint256);
 
+    /**
+     * @notice Total amount of admin fees of the underlying held in this market
+     */
+    function totalAdminFees() external view returns (uint256);
+
+    /**
+     * @notice Total amount of admin fees of the underlying held in this market
+     */
+    function totalFuseFees() external view returns (uint256);
 }
